@@ -63,13 +63,13 @@ def predict(smiles):
         output = model(input_data)
 
     scalar = MinMaxScaler()
-    df = pd.read_pickle("data/updated_polymers.pth")
+    df = pd.read_pickle("updated_polymers.pth")
     scalar.fit_transform((df["Egc"]).values.reshape(-1, 1))
     
     return scalar.inverse_transform((output.numpy()).reshape(-1,1))
     
 def original(smiles):
-    df = pd.read_pickle("data/updated_polymers.pth")
+    df = pd.read_pickle("updated_polymers.pth")
     result_df = df[df['smiles'] == smiles]
     
     return result_df
