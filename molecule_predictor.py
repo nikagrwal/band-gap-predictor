@@ -101,7 +101,7 @@ def predict(smiles):
     model = MTmodel()
 
     # Load the state_dict into the model
-    state_dict_path = '../models/molecule_circular.pth'  # Replace with the actual path to your state_dict file
+    state_dict_path = 'models/molecule_circular.pth'  # Replace with the actual path to your state_dict file
     state_dict = torch.load(state_dict_path, map_location=torch.device('cpu'))  # Load the state_dict
 
     # Load the state_dict into the model
@@ -117,14 +117,14 @@ def predict(smiles):
         output = model(input_data)
     
     scalar = MinMaxScaler()
-    df = pd.read_pickle("../data/updated_molecules.pth")
+    df = pd.read_pickle("data/updated_molecules.pth")
     scalar.fit_transform((df["Egc"]).values.reshape(-1, 1))
     
     return scalar.inverse_transform((output.numpy()).reshape(-1,1))   
    
 
 def original(smiles):
-    df = pd.read_pickle("../data/updated_molecules.pth")
+    df = pd.read_pickle("data/updated_molecules.pth")
     result_df = df[df['smiles'] == smiles]
     
     return result_df

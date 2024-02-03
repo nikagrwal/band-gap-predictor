@@ -1,5 +1,6 @@
 import streamlit as st
-from tabs import about_project, predictor, tutorial
+import about_project
+import predictor, tutorial
 
 
 

@@ -1,5 +1,5 @@
-from tabs.molecule_predictor import predict as m_predictor, original as m_original
-from tabs.polymer_predictor import predict as p_predictor, original as p_original
+from molecule_predictor import predict as m_predictor, original as m_original
+from polymer_predictor import predict as p_predictor, original as p_original
 
 import torch.nn as nn
 import streamlit as st
