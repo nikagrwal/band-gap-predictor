@@ -189,7 +189,7 @@ ply==3.11
 prometheus-client==0.8.0
 prompt-toolkit==3.0.39
 protobuf==3.20.3
-psmiles @ git+https://github.com/Ramprasad-Group/psmiles.git@main
+psmiles @ git+https://github.com/Ramprasad-Group/psmiles.git
 psutil==5.9.6
 ptyprocess==0.7.0
 pure-eval==0.2.2
