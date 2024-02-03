@@ -1,5 +1,3 @@
-
-canonicalize-psmiles @ git+https://github.com/Ramprasad-Group/canonicalize_psmiles.git@33d2525da4a14de40446e2244c4c9787cea45464
 numpy==1.24.4
 psmiles @ git+https://github.com/Ramprasad-Group/psmiles.git@d3a9029af9eeb40a546d6d2728228c57d81a8b53
 importlib-metadata==6.8.0
