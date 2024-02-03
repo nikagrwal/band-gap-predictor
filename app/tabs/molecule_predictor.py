@@ -127,5 +127,5 @@ def original(smiles):
     df = pd.read_pickle("../data/updated_molecules.pth")
     result_df = df[df['smiles'] == smiles]
     
-    return result_df.iloc[0]['Egc']
+    return result_df
     
